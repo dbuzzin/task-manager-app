@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+
+    <script src="https://kit.fontawesome.com/eee765909f.js" crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="../src/css/index.css" /> -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- <div id="root"> -->
+      <header>
+        <div class="top-bar">
+          <div class="logo">
+            App Logo
+          </div>
+        </div>
+      </header>
+  
+      <section class="middle">
+        <nav class="navbar">
+          <div class="navbar__inner">
+            <div class="navbar__category">
+              <div class="nav-title">My Tasks</div>
+              <div class="nav-items">5</div>
+            </div>
+            <div class="navbar__category">
+              <div class="nav-title">Category 1</div>
+              <div class="nav-items">2</div>
+            </div>
+            <div class="navbar__category">
+              <div class="nav-title">Category 2</div>
+              <div class="nav-items">3</div>
+            </div>
+            <div class="navbar__category">
+              <div class="nav-title">Category 3</div>
+              <div class="nav-items"></div>
+            </div>
+            <div class="navbar__category">
+              <div class="nav-title">Category 4</div>
+              <div class="nav-items"></div>
+            </div>
+            <div class="navbar__category">
+              <div class="nav-title">Category 5</div>
+              <div class="nav-items"></div>
+            </div>
+          </div>
+          
+          
+        </nav>
+        <main class="main-window">
+          <div class="toolbar"></div>
+
+          <div class="main-window__inner">
+
+            <!-- Start Tasks -->
+            
+            <div class="task-display">
+              <!-- <div class="task-display__tabs"> -->
+              <div id="react-tabs"></div>
+                <!-- <div class="color-assigned open">
+                  <div>
+                    Assigned
+                  </div>
+                </div>
+                <div class="color-open closed">
+                  <div>
+                    Open
+                  </div>
+                </div>
+                <div class="color-hold closed">
+                  <div>
+                    On Hold
+                  </div>
+                </div>
+                <div class="color-complete closed">
+                  <div>
+                    Complete
+                  </div>
+                </div>
+                <div class="color-rejected closed">
+                  <div>
+                    Rejected
+                  </div>
+                </div> -->
+
+              <!-- </div> -->
+              <!-- <div class="task-display__top color-assigned inner-shadow-bottom-tiny">
+
+              </div> -->
+              <div class="task-display__main">
+
+                <!-- Task Item -->
+
+                <div class="task inner-shadow-bottom-tiny">
+
+                  <!-- Swipe to Complete -->
+
+                  <div class="task__complete closed">
+                    <div class="closed">Complete</div>
+                  </div>
+                  
+                  <!-- Task Body -->
+
+                  <div class="task__body">
+
+                    <div class="task__body-top">
+                      <div class="task__body-desc">
+                        Description of task and what needs to be done.
+                      </div>
+                      <div class="task__body-star star-inactive">
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    
+                    <div class="task__body-bottom">
+                      <div class="task__body-user">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="user-name">User Name</span>
+                      </div>
+                      <div class="task__body-date">
+                        <i class="far fa-calendar-alt"></i>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- Swipe to Reject -->
+
+                  <div class="task__reject closed">
+                    <div class="">Reject</div>
+                  </div>
+
+                </div>
+
+                <!-- Task Item -->
+
+                <div class="task">
+
+                  <!-- Swipe to Complete -->
+
+                  <div class="task__complete closed">
+                    <div class="closed">Complete</div>
+                  </div>
+                  
+                  <!-- Task Body -->
+
+                  <div class="task__body">
+
+                    <div class="task__body-top">
+                      <div class="task__body-desc">
+                        Another desciption of a task which needs doing. The star being orange shows this one is open.
+                      </div>
+                      <div class="task__body-star star-active">
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+
+                    <div class="task__body-bottom">
+                      <div class="task__body-user">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="user-name">User Name</span>
+                      </div>
+                      <div class="task__body-date">
+                        <i class="far fa-calendar-alt"></i>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- Swipe to Reject -->
+
+                  <div class="task__inactive">
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <!-- End Tasks -->
+
+
+
+
+            <!-- Start Stats -->
+
+            <div class="stats-display">
+
+              Stats will go here...
+
+            </div>
+
+
+          </div>
+        </main>
+      </section>
+      <footer>
+        <div class="bottom-bar">
+
+        </div>
+      </footer>
+
+    
+  </body>
+</html>
