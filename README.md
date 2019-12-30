@@ -18,6 +18,7 @@ This app will be using React on the frontend and Node on the backend. So far I h
   * Profiles
 * Private Messaging
 * Team Chat
+* Team Bulletins / News
 * Statistics
 * Reminders
 
