@@ -1,0 +1,59 @@
+.form {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    label {
+        margin-bottom: 1rem;
+    }
+
+    &__field {
+
+        display: flex;
+        font-size: 1.3rem;
+
+        input,
+        textarea,
+        select {
+
+            transition: all 0.5s;
+            border: 0;
+            border-bottom: 0.3rem solid #e8e1db;
+            background: none;
+            outline: none;
+
+            &:focus {
+
+                border-bottom: 0.3rem solid var(--green);
+            }
+        }
+
+        input,
+        select {
+
+            height: 4rem;
+        }
+
+        textarea {
+
+            height: 10rem;
+            resize: none;
+        }
+    }
+
+    .column {
+
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .row {
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+}

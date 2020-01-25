@@ -1,4 +1,7 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
+import AddTaskButton from "./AddTaskButton";
+
+import { ModalProvider } from "./contexts/ModalContext";
 
 
 
@@ -29,7 +32,7 @@ const tabsArr = [
 
 
 
-class Tab extends React.Component {
+class Tab extends Component {
 
     state = {
 
@@ -76,7 +79,7 @@ class Tab extends React.Component {
 
 
 
-class TabList extends React.Component {
+class TabList extends Component {
 
     state = {
 
@@ -122,11 +125,11 @@ class TabList extends React.Component {
         return (
             
             <div className="task-display__tabs" onLoad={this.addTabs}>
-                { tabsArr.map((tab, i) => <Tab changeColor={this.sendColorChange} 
+                { tabsArr.map((tab, index) => <Tab changeColor={this.sendColorChange} 
                                                updateOpen={this.updateOpenState} 
                                                populate={this.addTabs} 
-                                               init={initState(i)} 
-                                               index={i} 
+                                               init={initState(index)} 
+                                               index={index} 
                                                class={tab.class} 
                                                name={tab.name} />) }
             </div>
@@ -138,39 +141,39 @@ class TabList extends React.Component {
 
 
 
-class TabWrapper extends React.Component {
+class TabWrapper extends Component {
 
     state = {
 
         color: "color-assigned"
     }
 
-
     // Change color of bar to match open tab.
-
 
     changeColor = (newColor) => {
 
         this.setState({color: newColor});
     }
 
-
-
-
-
     render() {
 
         return(
 
-            <div>
+            <Fragment>
                 <TabList onChange={this.changeColor}/>
                 <div className={`task-display__top ${this.state.color} inner-shadow-bottom-tiny`}>
+
+                    <ModalProvider>
+                        <AddTaskButton />
+                    </ModalProvider>
+                    
                 </div>
-            </div>
+            </Fragment>
             
         );
     }
 }
+
 
 
 export default TabWrapper;

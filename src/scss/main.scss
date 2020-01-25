@@ -1,111 +1,61 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+@import "abstracts/variables";
 
-:root {
+@import "base/base";
 
-    --purple: #b763e8;
-    --blue: #477ae6;
-    --orange: #EC6C04;
-    --gold: #C58607;
-    --green: #5ba527;
-    --red: #dc3545;
-}
+@import "components/forms";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video, input, textarea {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-family: "Montserrat", sans-serif;
-  vertical-align: baseline; }
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%; }
-
-body {
-  min-height: 100vh;
-  background-color: #fcf7f0;
-  color: #140c02;
-  display: flex;
-  flex-direction: column; 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-*,
-*::before,
-*::after {
-  position: relative;
-  box-sizing: inherit; }
-
-a,
-a:link,
-a:visited,
-a:active {
-  text-decoration: none; }
-
+@import "layout/_add-task-modal";
 
 .top-bar {
 
-  display: flex;
-  align-items: center;
-  padding-left: 2rem;
-  height: 5rem;
-  background-color: #171717;
-  color: #fff7f1;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    height: 5rem;
+    background-color: #171717;
+    color: #fff7f1;
 }
 
 .logo {
 
-  font-size: 1.5rem;
-  font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .middle {
 
-  display: flex;
-  flex: 1;
+    display: flex;
+    flex: 1;
 }
 
 .navbar {
 
-  padding: 2rem 1.5rem 0 2rem;
-  width: 25rem;
-  background-color: #fcfaf8;
+    padding: 2rem 1.5rem 0 2rem;
+    width: 25rem;
+    background-color: #fcfaf8;
 
-  &__inner {
+    &__inner {
 
-    width:100%;
-  }
-
-  &__category {
-
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    font-weight: 400;
-    
-    & * {
-
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        width: 100%;
     }
 
-    &:not(:last-child) {
+    &__category {
 
-        margin-bottom: 3rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        font-weight: 400;
+
+        & * {
+
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        &:not(:last-child) {
+
+            margin-bottom: 3rem;
+        }
     }
-  }
 }
 
 .nav-title {
@@ -124,18 +74,18 @@ a:active {
     flex: 1;
     background-color: #e8e1db;
 
-  &__inner {
+    &__inner {
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    // padding: 10rem 15rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        // padding: 10rem 15rem;
 
-    // & > * {
+        // & > * {
 
-    //     // m    argin: 10% 10%;
-    // }
-  }
+        //     // m    argin: 10% 10%;
+        // }
+    }
 }
 
 .toolbar {
@@ -159,8 +109,8 @@ a:active {
         width: 90%;
         height: 3rem;
 
-        & > * {
-            
+        &>* {
+
             flex: 1;
             height: 100%;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
@@ -169,7 +119,7 @@ a:active {
         .closed {
 
             &:hover {
-    
+
                 height: 3.5rem;
             }
         }
@@ -177,7 +127,23 @@ a:active {
 
     &__top {
 
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         height: 4rem;
+
+        .add-task-icon {
+
+            margin-right: 1.3rem;
+            font-size: 1.7rem;
+            color: #ffffff;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+
+            &:hover {
+
+                cursor: pointer;
+            }
+        }
     }
 
     &__main {
@@ -185,6 +151,7 @@ a:active {
         flex: 1;
         background-color: #fcfaf8;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+        overflow: auto;
     }
 }
 
@@ -216,7 +183,7 @@ a:active {
 .open {
 
     display: flex;
-    flex-grow: 2; 
+    flex-grow: 2;
     justify-content: center;
     align-items: center;
     height: 4rem;
@@ -231,13 +198,15 @@ a:active {
     flex-shrink: 1;
     transition: height 0.3s;
 
-    & > * {
+    &>* {
 
         display: none;
     }
 }
 
-.inner-shadow-bottom-tiny { box-shadow: inset 0 -0.1rem 0.2rem -0.1rem rgba(0, 0, 0, 0.3); }
+.inner-shadow-bottom-tiny {
+    box-shadow: inset 0 -0.1rem 0.2rem -0.1rem rgba(0, 0, 0, 0.3);
+}
 
 .task {
 
@@ -253,7 +222,7 @@ a:active {
         flex-grow: 1;
         padding: 1rem;
         width: 100%;
-        
+
     }
 
     &__body-top {
@@ -275,7 +244,7 @@ a:active {
         width: 20%;
         font-size: 1.5rem;
 
-        & > i {
+        &>i {
 
             height: max-content;
 
@@ -300,8 +269,8 @@ a:active {
         display: flex;
         align-items: baseline;
 
-        & > i {
-            
+        &>i {
+
             font-size: 1.7rem;
         }
 
@@ -317,12 +286,12 @@ a:active {
         display: flex;
         align-items: center;
 
-        & > i {
+        &>i {
 
             font-size: 1.7rem;
             margin-right: 0.1rem;
             color: #8f8a87;
-            transition: color 0.5s; 
+            transition: color 0.5s;
 
             &:hover {
 
@@ -354,9 +323,14 @@ a:active {
     }
 }
 
-.star-active { color: var(--gold); text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2)}
+.star-active {
+    color: var(--gold);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2)
+}
 
-.star-inactive { color: #52504f}
+.star-inactive {
+    color: #52504f
+}
 
 .column {
 
@@ -379,12 +353,93 @@ a:active {
 
 footer {
 
-  display: flex;
-  flex-shrink: 0;
-  height: 3rem;
+    display: flex;
+    flex-shrink: 0;
+    height: 3rem;
 }
 
 .bottom-bar {
 
-  height: 3rem;
+    height: 3rem;
+}
+
+.modal-backdrop {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s, backdrop-filter 1s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+
+    &__window {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60%;
+        background-color: #ffffff;
+        box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.7);
+        opacity: 0;
+
+        &-closebtn {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            height: 1.5rem;
+            font-size: 3rem;
+            overflow: hidden;
+
+            &:hover {
+
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.add-task-wrapper {
+
+    display: flex;
+    height: 70%;
+    width: 70%;
+
+}
+
+
+
+.modal-open {
+
+    transition: background-color 1s, backdrop-filter 1s;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+
+    & * {
+
+        transition: opacity 0.5s;
+        opacity: 1;
+    }
+}
+
+.modal-fade {
+
+    transition: opacity 1s;
+    opacity: 0;
+
+    & * {
+
+        transition: opacity 0.5s;
+        opacity: 0;
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }

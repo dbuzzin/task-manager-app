@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.a81ff169.chunk.css",
-    "main.js": "/static/js/main.3ee68133.chunk.js",
-    "main.js.map": "/static/js/main.3ee68133.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2d054b47.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2d054b47.js.map",
-    "static/js/2.6a819df4.chunk.js": "/static/js/2.6a819df4.chunk.js",
-    "static/js/2.6a819df4.chunk.js.map": "/static/js/2.6a819df4.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.326cd86f6e3735808ccc521bd196aa85.js": "/precache-manifest.326cd86f6e3735808ccc521bd196aa85.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.a81ff169.chunk.css.map": "/static/css/main.a81ff169.chunk.css.map",
-    "static/js/2.6a819df4.chunk.js.LICENSE": "/static/js/2.6a819df4.chunk.js.LICENSE"
+    "main.css": "/task-manager-app/static/css/main.a81ff169.chunk.css",
+    "main.js": "/task-manager-app/static/js/main.3ee68133.chunk.js",
+    "main.js.map": "/task-manager-app/static/js/main.3ee68133.chunk.js.map",
+    "runtime-main.js": "/task-manager-app/static/js/runtime-main.84ae6c9a.js",
+    "runtime-main.js.map": "/task-manager-app/static/js/runtime-main.84ae6c9a.js.map",
+    "static/js/2.6a819df4.chunk.js": "/task-manager-app/static/js/2.6a819df4.chunk.js",
+    "static/js/2.6a819df4.chunk.js.map": "/task-manager-app/static/js/2.6a819df4.chunk.js.map",
+    "index.html": "/task-manager-app/index.html",
+    "precache-manifest.2c1c0c982830aaba952a9e13594c4f2e.js": "/task-manager-app/precache-manifest.2c1c0c982830aaba952a9e13594c4f2e.js",
+    "service-worker.js": "/task-manager-app/service-worker.js",
+    "static/css/main.a81ff169.chunk.css.map": "/task-manager-app/static/css/main.a81ff169.chunk.css.map",
+    "static/js/2.6a819df4.chunk.js.LICENSE": "/task-manager-app/static/js/2.6a819df4.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.2d054b47.js",
+    "static/js/runtime-main.84ae6c9a.js",
     "static/js/2.6a819df4.chunk.js",
     "static/css/main.a81ff169.chunk.css",
     "static/js/main.3ee68133.chunk.js"

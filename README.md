@@ -1,6 +1,8 @@
 # Task Manager App
 
-This app will be using React on the frontend and Node on the backend. So far I have laid out some of the UI design which I am now converting to React components.
+I have chosen to use a combination of Redux and React's context API for the state management for scalability. Tasks are now able to be assigned but currently temporarily stored front end. Next steps are to build backend with Node, Express and MongoDB. 
+
+~~This app will be using React on the front end and Node on the backend. So far I have laid out some of the UI design which I am now converting to React components.~~
 
 ### [Click Here to See it so Far](https://dbuzzin.github.io/task-manager-app/)
 
@@ -9,7 +11,7 @@ This app will be using React on the frontend and Node on the backend. So far I h
 ## Features to Include
 
 * General Task Functions 
-  * Add / Open / Put on Hold / Complete / Reject
+  * ~~Add~~ / Open / Put on Hold / Complete / Reject
 * Add Categories
 * Sort by Category
 * Assign tasks

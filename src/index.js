@@ -1,6 +1,28 @@
+// React Imports
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/index.css';
-import TabWrapper from "./components/TabList";
 
-ReactDOM.render(<TabWrapper />, document.getElementById("react-tabs"));
+// Redux Imports
+
+import { Provider } from "react-redux";
+
+import configureStore from "./store";
+
+// Component Imports
+
+import MainWindowInner from "./components/MainWindowInner";
+
+// Style Imports
+
+import './css/index.css';
+
+// Render
+
+ReactDOM.render(
+
+    <Provider store={configureStore()}>
+        <MainWindowInner />
+    </Provider>
+    
+    , document.getElementById("react-mainWindowInner"));
