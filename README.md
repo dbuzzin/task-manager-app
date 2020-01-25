@@ -1,6 +1,6 @@
 # Task Manager App
 
-I have chosen to use a combination of Redux and React's context API for the state management to aid in scalability. Tasks are now able to be assigned but currently temporarily stored front end. Next steps are to build backend with Node, Express and MongoDB. 
+I have chosen to use a combination of Redux and React's context API for the state management to aid in scalability. Tasks are now able to be assigned but currently temporarily stored front end. Next steps are to add form validation and build the backend with Node, Express and MongoDB. 
 
 ~~This app will be using React on the front end and Node on the backend. So far I have laid out some of the UI design which I am now converting to React components.~~
 
