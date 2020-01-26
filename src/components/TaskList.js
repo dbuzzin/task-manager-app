@@ -111,32 +111,22 @@ class Task extends Component {
 
 class TaskList extends Component {
 
-    state = {   
-
-        tasks: []
-    }
-
     static contextType = ReactReduxContext;
 
     store = this.context.store;
-
-    componentDidMount = () => {
-
-        setInterval(() => this.setState({tasks: [...this.store.getState().tasks]}), 1000);
-    }
-
 
     render() {
 
         return(
 
                 <div className="task-display__main">
-                    { this.state.tasks.map((task, index) => (
+                    { this.props.tasks.map((task, index) => (
 
                         <Task desc={task.description} 
-                                    assignedTo={task.userAssigned}
-                                    isOpen={task.isOpen}
-                                    important={task.important} />
+                              assignedTo={task.userAssigned}
+                              isOpen={task.isOpen}
+                              important={task.important}
+                              key={index} />
 
                     ))}
                 </div>
@@ -148,4 +138,11 @@ class TaskList extends Component {
 
 
 
-export default connect()(TaskList);
+const mapStateToProps = state => ({
+
+    ...state
+});
+
+
+
+export default connect(mapStateToProps, null)(TaskList);

@@ -30,8 +30,6 @@ const tabsArr = [
 
 
 
-
-
 class Tab extends Component {
 
     state = {
@@ -58,8 +56,6 @@ class Tab extends Component {
 
 
 
-
-
     render() {
 
         return(
@@ -74,8 +70,6 @@ class Tab extends Component {
         );
     }
 }
-
-
 
 
 
@@ -116,8 +110,6 @@ class TabList extends Component {
 
 
 
-
-
     render() {
 
         const initState = (i) => i === 0 ? true : false;
@@ -126,18 +118,17 @@ class TabList extends Component {
             
             <div className="task-display__tabs" onLoad={this.addTabs}>
                 { tabsArr.map((tab, index) => <Tab changeColor={this.sendColorChange} 
-                                               updateOpen={this.updateOpenState} 
-                                               populate={this.addTabs} 
-                                               init={initState(index)} 
-                                               index={index} 
-                                               class={tab.class} 
-                                               name={tab.name} />) }
+                                                   updateOpen={this.updateOpenState} 
+                                                   populate={this.addTabs} 
+                                                   init={initState(index)} 
+                                                   index={index} 
+                                                   class={tab.class} 
+                                                   name={tab.name}
+                                                   key={index} />) }
             </div>
         );
     }
 }
-
-
 
 
 
