@@ -1,75 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>React App</title>
-    <script src="https://kit.fontawesome.com/eee765909f.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <!-- <div id="root"> -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/eee765909f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-      <header>
-        <div class="top-bar">
-          <div class="logo">
-            App Logo
-          </div>
-        </div>
-      </header>
-
-      <section class="middle">
-        <nav class="navbar">
-          <div class="navbar__inner">
-            <div class="navbar__category">
-              <div class="nav-title">My Tasks</div>
-              <div class="nav-items">5</div>
+        <header>
+            <div class="top-bar">
+              <div class="logo">
+                App Logo
+              </div>
             </div>
-            <div class="navbar__category">
-              <div class="nav-title">Category 1</div>
-              <div class="nav-items">2</div>
+          </header>
+    
+          <section class="middle">
+            <nav class="navbar">
+              <div class="navbar__inner">
+                <div class="navbar__category">
+                  <div class="nav-title">My Tasks</div>
+                  <div class="nav-items">5</div>
+                </div>
+                <div class="navbar__category">
+                  <div class="nav-title">Category 1</div>
+                  <div class="nav-items">2</div>
+                </div>
+                <div class="navbar__category">
+                  <div class="nav-title">Category 2</div>
+                  <div class="nav-items">3</div>
+                </div>
+                <div class="navbar__category">
+                  <div class="nav-title">Category 3</div>
+                  <div class="nav-items"></div>
+                </div>
+                <div class="navbar__category">
+                  <div class="nav-title">Category 4</div>
+                  <div class="nav-items"></div>
+                </div>
+                <div class="navbar__category">
+                  <div class="nav-title">Category 5</div>
+                  <div class="nav-items"></div>
+                </div>
+              </div>
+              
+              
+            </nav>
+            <main class="main-window">
+              <div class="toolbar"></div>
+    
+              <div id="react-mainWindowInner" class="main-window__inner"></div>
+    
+            </main>
+          </section>
+          <footer>
+            <div class="bottom-bar">
+    
             </div>
-            <div class="navbar__category">
-              <div class="nav-title">Category 2</div>
-              <div class="nav-items">3</div>
-            </div>
-            <div class="navbar__category">
-              <div class="nav-title">Category 3</div>
-              <div class="nav-items"></div>
-            </div>
-            <div class="navbar__category">
-              <div class="nav-title">Category 4</div>
-              <div class="nav-items"></div>
-            </div>
-            <div class="navbar__category">
-              <div class="nav-title">Category 5</div>
-              <div class="nav-items"></div>
-            </div>
-          </div>
-          
-          
-        </nav>
-        <main class="main-window">
-          <div class="toolbar"></div>
-
-          <div id="react-mainWindowInner" class="main-window__inner"></div>
-
-        </main>
-      </section>
-      <footer>
-        <div class="bottom-bar">
-
-        </div>
-      </footer>
-
-      <!-- <div id="react-modal"></div> -->
-  </body>
+          </footer>
+        
+        <script src="/bundle.js"></script>
+    </body>
 </html>

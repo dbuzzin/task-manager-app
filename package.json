@@ -1,47 +1,50 @@
 {
   "name": "task-manager-app",
-  "homepage": "http://dbuzzin.github.io/task-manager-app/",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "A task/project management app",
+  "main": "webpack.config.js",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "immutability-helper": "^3.0.1",
-    "node-sass": "^4.13.0",
+    "css-loader": "^3.4.2",
+    "history": "^4.10.1",
+    "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
-    "react-scripts": "3.3.0",
-    "react-transition-group": "^4.3.0",
+    "react-router-dom": "^5.1.2",
+    "react-spring": "^8.0.27",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
-  },
-  "scripts": {
-    "watch:sass": "node-sass ./src/scss/main.scss ./src/css/index.css -w",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^1.1.3",
+    "sass-loader": "^8.0.2",
+    "uuid": "^3.4.0"
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1"
-  }
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "gh-pages": "^2.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "webpack",
+    "deploy": "gh-pages -d build",
+    "watch:sass": "node-sass public/scss/main.scss public/css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbuzzin/task-manager-app.git"
+  },
+  "keywords": [],
+  "author": "Danny Pearson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbuzzin/task-manager-app/issues"
+  },
+  "homepage": "https://dbuzzin.github.io/task-manager-app/"
 }
