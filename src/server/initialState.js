@@ -95,6 +95,17 @@ const initialState = {
             important       : false,
             sliderOpen      : false
         },
+        {
+            id              : uuid(),
+            name            : "Task 8",
+            description     : "Clicking on the star will set the task as open and move it under the open tab.",
+            userAssigned    : "userName3",
+            dateAssigned    : "...",
+            deadline        : "...",
+            groupID         : "g1",
+            important       : false,
+            sliderOpen      : false
+        },
     ],
 
     groups: [
